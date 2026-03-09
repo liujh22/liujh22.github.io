@@ -4,7 +4,7 @@
 cv_pdf: /assets/pdf/Jiahuan_s_CV.pdf # path to your CV PDF file
 email: ntd9kz@virginia.edu # your email address
 linkedin_username: jiahuan-liu-aaa6b7259
-rss_icon: true # comment this line to hide the RSS icon
+orcid_id: 0000-0002-9567-0757 # your ORCID ID
 scholar_userid: IsKJDggAAAAJ # your Google Scholar ID
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
