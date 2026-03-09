@@ -6,7 +6,7 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: my_photo.png
+  image: avatar.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>485 McCormick Rd, Gilmer</p>
