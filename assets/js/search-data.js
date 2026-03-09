@@ -511,7 +511,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          window.open("/assets/pdf/Jiahuan_s_CV.pdf", "_blank");
         },
       },{
         id: 'social-email',
@@ -521,11 +521,11 @@ ninja.data = [{
           window.open("mailto:%6E%74%64%39%6B%7A@%76%69%72%67%69%6E%69%61.%65%64%75", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
+          window.open("https://www.linkedin.com/in/jiahuan-liu-aaa6b7259", "_blank");
         },
       },{
         id: 'social-rss',
@@ -539,14 +539,7 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("https://scholar.google.com/citations?user=IsKJDggAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',
