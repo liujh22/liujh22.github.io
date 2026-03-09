@@ -6,7 +6,7 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: avatar.jpeg
+  image: my_photo.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>485 McCormick Rd, Gilmer</p>
@@ -26,8 +26,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Welcome to my corner of neuroscience and computation. 👋
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am a Ph.D. student in Biology at the University of Virginia, working in the [Cang Lab](https://uva.theopenscholar.com/cang-lab) as part of the [Program in Fundamental Neuroscience (PFN)](https://neuroscience.virginia.edu/). My research focuses on how neural circuits transform visual inputs into behavior, with a particular interest in the superior colliculus and its sensorimotor integration.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I received my Master's in Psychology from New York University, where I studied behavioral neuroscience and computational modeling of zebrafish locomotion with [Dr. David Schoppik](https://www.schoppiklab.com/) and [Dr. Yunlu Zhu](https://www.zhulab.fish/).
+
+My work combines behavioral quantification, neural electrophysiology recordings, and computer vision modeling to understand how animals detect and respond to ethologically relevant visual stimuli, such as looming threats. I am particularly interested in how midbrain circuits implement efficient algorithms for fast sensory-driven behavior, and how these principles may inspire biologically grounded computational models.
