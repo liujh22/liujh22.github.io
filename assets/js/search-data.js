@@ -146,11 +146,11 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/jiahuan-liu-aaa6b7259", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
+        id: 'social-orcid',
+        title: 'ORCID',
         section: 'Socials',
         handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("https://orcid.org/0000-0002-9567-0757", "_blank");
         },
       },{
         id: 'social-scholar',
