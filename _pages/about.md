@@ -9,8 +9,8 @@ profile:
   image: my_photo.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>485 McCormick Rd</p>
-    <p>Charlottesville, Virginia 22903</p>
+    <p>485 McCormick Rd, Gilmer</p>
+    <p>Charlottesville, VA 22903</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
