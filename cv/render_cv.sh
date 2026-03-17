@@ -5,8 +5,8 @@ CV_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SITE_ROOT="$(cd "$CV_DIR/.." && pwd)"
 
 TEX_FILE="main.tex"
-PDF_TMP="cv.pdf"
-PDF_TARGET="$SITE_ROOT/assets/pdf/cv.pdf"
+PDF_TMP="Jiahuan_s_CV.pdf"
+PDF_TARGET="$SITE_ROOT/assets/pdf/Jiahuan_s_CV.pdf"
 
 cd "$CV_DIR"
 
