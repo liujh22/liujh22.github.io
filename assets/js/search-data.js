@@ -67,7 +67,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-zebrafish-locomotion-and-balance-research",
           title: 'Zebrafish Locomotion and Balance Research',
-          description: "Three zebrafish studies on locomotor strategy, balance deficits, and gravity-dependent animacy perception.",
+          description: "A three-paper story of how my fascination with gravity sensation and balance in zebrafish evolved.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "teachings-data-science-fundamentals",
