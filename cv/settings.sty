@@ -94,25 +94,23 @@
 \subrubricfont{\large\bfseries\sffamily}
 \subrubricalignment{l}
 
-\newcommand{\makefield}[2]{\makebox[1.5em]{\color{MarkerColour!80!black}#1} #2\hspace{2em}}
+\newcommand{\makefield}[2]{\makebox[1.5em]{\color{MarkerColour!80!black}#1} #2\hspace{1.2em}}
 
 \keyalignment{r}
 % Use a fixed width for the left date column so the marker column
 % stays vertically aligned across all sections.
 \newlength{\cvDateColWidth}
-\setlength{\cvDateColWidth}{2.6cm}
+\setlength{\cvDateColWidth}{3.5cm}
 \newcolumntype{k}{>{\@keyfont\raggedleft\arraybackslash}p{\cvDateColWidth}}
 \rubricalignment{l}
 \renewcommand{\arraystretch}{1.25}
 \urlstyle{tt}
 
 \newcommand{\prefixmarker}[1]{\def\@prefixmarker{#1}}
-\def\@prefixmarker{\relscale{.9}\faBookmark}
+\def\@prefixmarker{}
 
 \prefix{%
-  \hspace*{-1ex}
-  \color{MarkerColour!80!black}\@prefixmarker%
-  \hspace*{1ex}%
+  \@prefixmarker%
 }
 
 \newcommand{\makerubrichead}[1]{\vskip\baselineskip\@@rubrichead{#1}}

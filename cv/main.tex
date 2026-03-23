@@ -67,6 +67,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\newlength{\contactleftcolwidth}
+\setlength{\contactleftcolwidth}{\dimexpr22em-2cm\relax}
+
 \leftheader{%
   {\LARGE\bfseries\sffamily Jiahuan Liu}
   % fontawesome5 doesn't have the X icon so we use
@@ -74,14 +77,10 @@
   % font size adjustment might be needed
   %\makefield{{\scriptsize\simpleicon{x}}}{\!\href{https://x.com/overleaf_example}{\texttt{@overleaf\_example}}}
 
-  \makefield{\faEnvelope[regular]}{\href{mailto:ntd9kz@virginia.edu}{\texttt{ntd9kz@virginia.edu}}}
-    
-  \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/jiahuan-liu-aaa6b7259//}{\texttt{Jiahuan Liu}}}
-  
-  \makefield{\faGithub}{\href{https://github.com/liujh22//}{\texttt{liujh22}}}  
-
-  %% Next line
-  \makefield{\faGlobe}{\href{https://liujh22.github.io/}{\texttt{Homepage}}}
+  \makebox[\contactleftcolwidth][l]{\makefield{\faEnvelope[regular]}{\href{mailto:ntd9kz@virginia.edu}{\texttt{ntd9kz@virginia.edu}}}}%
+  \makefield{\raisebox{0.12ex}{\faPhone}}{\texttt{+1 929-689-5869}}\\
+  \makebox[\contactleftcolwidth][l]{\makefield{\faGlobe}{\href{https://liujh22.github.io/}{\texttt{liujh22.github.io}}}}%
+  \makefield{\raisebox{0.12ex}{\faMapMarker}}{\texttt{485 McCormick Rd, Charlottesville, VA 22904}}
   % You can use a tabular here if you want to line up the fields.
 }
 
