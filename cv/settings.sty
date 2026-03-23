@@ -40,8 +40,8 @@
 \usetikzlibrary{shapes,shadows}
 
 \RequirePackage{comment}
-\definecolor{SwishLineColour}{HTML}{57068C}
-\definecolor{MarkerColour}{HTML}{B6073F}
+\definecolor{SwishLineColour}{HTML}{F29105}
+\definecolor{MarkerColour}{HTML}{CC6A00}
 
 % If you're not a researcher nor an academic, you probably don't need biblatex; delete this line.
 \RequirePackage{biblatex}
@@ -97,6 +97,11 @@
 \newcommand{\makefield}[2]{\makebox[1.5em]{\color{MarkerColour!80!black}#1} #2\hspace{2em}}
 
 \keyalignment{r}
+% Use a fixed width for the left date column so the marker column
+% stays vertically aligned across all sections.
+\newlength{\cvDateColWidth}
+\setlength{\cvDateColWidth}{2.6cm}
+\newcolumntype{k}{>{\@keyfont\raggedleft\arraybackslash}p{\cvDateColWidth}}
 \rubricalignment{l}
 \renewcommand{\arraystretch}{1.25}
 \urlstyle{tt}
