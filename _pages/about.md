@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 
 profile:
@@ -24,8 +24,8 @@ latest_posts:
 
 Welcome to my corner of neuroscience and computation. 👋
 
-I am a Ph.D. student in Biology at the University of Virginia, working in the [Cang Lab](https://uva.theopenscholar.com/cang-lab) as part of the [Program in Fundamental Neuroscience (PFN)](https://neuroscience.virginia.edu/). My research focuses on how neural circuits transform visual inputs into behavior, with a particular interest in the superior colliculus and its sensorimotor integration.
+I am a Ph.D. student in Biology at the University of Virginia, working in the [Cang Lab](https://uva.theopenscholar.com/cang-lab) as part of the [Program in Fundamental Neuroscience (PFN)](https://neuroscience.virginia.edu/). My research investigates visual processing in tree shrews 🐿️ and mice 🐀, from circuits to behavior, with a particular focus on the superior colliculus, a key hub of midbrain vision.
 
-I received my Master's in Psychology from New York University, where I studied behavioral neuroscience and computational modeling of zebrafish locomotion with [Dr. David Schoppik](https://www.schoppiklab.com/) and [Dr. Yunlu Zhu](https://www.zhulab.fish/).
+Before UVA, I received my Master's in Psychology from New York University, where I studied behavioral neuroscience and computational modeling of zebrafish locomotion with [Dr. David Schoppik](https://www.schoppiklab.com/) and [Dr. Yunlu Zhu](https://www.zhulab.fish/).
 
-My work combines behavioral quantification, neural electrophysiology recordings, and computer vision modeling to understand how animals detect and respond to ethologically relevant visual stimuli, such as looming threats. I am particularly interested in how midbrain circuits implement efficient algorithms for fast sensory-driven behavior, and how these principles may inspire biologically grounded computational models.
+My work combines large-scale electrophysiology, two-photon calcium imaging, and computational modeling to understand how midbrain circuits implement efficient algorithms for fast, sensory-driven behavior.
