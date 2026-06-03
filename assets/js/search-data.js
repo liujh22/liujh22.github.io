@@ -68,17 +68,7 @@ ninja.data = [{
           section: "News",},{id: "news-starred-crafter-station-petdex-an-open-source-gallery-and-cli-for-animated-coding-agent-pets-for-codex-and-friends",
           title: 'Starred crafter-station/petdex, an open-source gallery and CLI for animated coding-agent pets for Codex...',
           description: "",
-          section: "News",},{id: "projects-zebrafish-locomotion-and-balance-research",
-          title: 'Zebrafish Locomotion and Balance Research',
-          description: "A three-paper story of how my fascination with gravity sensation and balance in zebrafish evolved.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-comparative-midbrain-vision-project-mouse-sc-and-tree-shrew",
-          title: 'Comparative Midbrain Vision Project (Mouse SC and Tree Shrew)',
-          description: "My current research direction on naturalistic motion coding in mouse superior colliculus and comparative interests in tree shrew.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "teachings-data-science-fundamentals",
+          section: "News",},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
           section: "Teachings",handler: () => {
