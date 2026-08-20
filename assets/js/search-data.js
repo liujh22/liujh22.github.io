@@ -37,11 +37,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-500-server-error",
+        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
-          title: '500 Server Error <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
         section: "Posts",
         handler: () => {
           
@@ -70,6 +70,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-our-paper-lighting-and-circadian-cues-shape-locomotor-strategies-for-balance-and-navigation-in-larval-zebrafish-has-been-accepted-by-proceedings-of-the-royal-society-b-biological-sciences",
           title: 'Our paper “Lighting and circadian cues shape locomotor strategies for balance and navigation...',
+          description: "",
+          section: "News",},{id: "news-our-project-a-foundation-model-of-the-superior-colliculus-has-been-selected-for-a-2026-transformative-neuroscience-pilot-grant-from-the-uva-brain-institute-i-am-deeply-grateful-to-my-mentors-zezhou-and-jc-for-their-guidance-and-support",
+          title: 'Our project, “A Foundation Model of the Superior Colliculus,” has been selected for...',
           description: "",
           section: "News",},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
