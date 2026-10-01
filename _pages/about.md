@@ -24,7 +24,7 @@ latest_posts:
 
 Welcome to my corner of neuroscience and computation. 👋
 
-I am a Ph.D. student in Neuroscience at the University of Virginia, co-advised by [Dr. Jianhua Cang](https://uva.theopenscholar.com/cang-lab) and [Dr. Zezhou Cheng](https://uva-computer-vision-lab.github.io/people.html) in the [Program in Fundamental Neuroscience (PFN)](https://neuroscience.virginia.edu/). My research investigates visual processing in tree shrews 🐿️ and mice 🐀, from circuits to behavior, with a particular focus on the superior colliculus — a key hub of midbrain vision — and on building data-driven computational models of its neural responses.
+I am a Ph.D. student studying Neuroscience at the University of Virginia, co-advised by [Dr. Jianhua Cang](https://uva.theopenscholar.com/cang-lab) and [Dr. Zezhou Cheng](https://uva-computer-vision-lab.github.io/people.html) in the [Program in Fundamental Neuroscience (PFN)](https://neuroscience.virginia.edu/). My research investigates visual processing in tree shrews 🐿️ and mice 🐀, from circuits to behavior, with a particular focus on the superior colliculus — a key hub of midbrain vision — and on building data-driven computational models of its neural responses.
 
 Before UVA, I received my Master’s in Psychology from New York University, where I studied behavioral neuroscience and computational modeling of zebrafish locomotion with [Dr. David Schoppik](https://www.schoppiklab.com/) and [Dr. Yunlu Zhu](https://www.zhulab.fish/).
 
