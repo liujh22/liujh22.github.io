@@ -37,26 +37,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        },{id: "post-cassyni-talk-lighting-and-circadian-cues",
         
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: "Cassyni talk: Lighting and circadian cues",
         
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        description: "My seminar on balance and navigation in larval zebrafish.",
         section: "Posts",
         handler: () => {
           
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+            window.location.href = "/blog/2026/cassyni-lighting-circadian-talk/";
           
         },
       },{id: "news-my-blog-goes-online-today",
@@ -64,9 +53,6 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-added-function-to-generate-and-update-cv-automatically",
           title: 'Added function to generate and update CV automatically.',
-          description: "",
-          section: "News",},{id: "news-starred-crafter-station-petdex-an-open-source-gallery-and-cli-for-animated-coding-agent-pets-for-codex-and-friends",
-          title: 'Starred crafter-station/petdex, an open-source gallery and CLI for animated coding-agent pets for Codex...',
           description: "",
           section: "News",},{id: "news-our-project-a-foundation-model-of-the-superior-colliculus-has-been-selected-for-a-2026-transformative-neuroscience-pilot-grant-from-the-uva-brain-institute-i-am-deeply-grateful-to-my-mentors-zezhou-and-jc-for-their-guidance-and-support",
           title: 'Our project, “A Foundation Model of the Superior Colliculus,” has been selected for...',
