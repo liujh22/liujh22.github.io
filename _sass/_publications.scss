@@ -186,3 +186,62 @@
 .citation-number {
   color: var(--global-theme-color);
 }
+
+// Compact, text-first publication list inspired by the Zhu Lab website.
+.publications-list {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+
+    > li {
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  .publication-entry {
+    line-height: 1.65;
+    overflow-wrap: break-word;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .publication-title {
+    background-color: rgba(91, 167, 178, 0.22);
+    font-weight: 600;
+    padding: 0.05em 0.1em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .publication-links {
+    font-size: 0.9rem;
+
+    a {
+      color: var(--global-text-color-light);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--global-theme-color);
+      }
+
+      + a::before {
+        content: "|";
+        display: inline-block;
+        color: var(--global-text-color-light);
+        margin: 0 0.4rem 0 0.2rem;
+      }
+    }
+  }
+}

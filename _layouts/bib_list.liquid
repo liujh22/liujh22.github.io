@@ -1,0 +1,46 @@
+---
+---
+<article id="{{ entry.key }}" class="publication-entry">
+  <p class="publication-authors">
+    {%- for author in entry.author_array -%}
+      {%- unless forloop.first -%}, {% endunless -%}
+      {%- assign given_names = author.first | replace: '-', ' ' | split: ' ' -%}
+      {%- capture author_name -%}
+        {{- author.last }} {% for name in given_names %}{{ name | slice: 0, 1 | upcase }}{% endfor %}
+      {%- endcapture -%}
+      {%- if site.scholar.last_name contains author.last and site.scholar.first_name contains author.first -%}
+        <strong>{{ author_name }}</strong>
+      {%- else -%}
+        {{- author_name -}}
+      {%- endif -%}
+      {%- if forloop.last -%}.{%- endif -%}
+    {%- endfor -%}
+  </p>
+  <p class="publication-citation">
+    <span class="publication-title">{{ entry.title }}.</span>
+    <em>{{ entry.journal }}</em> {{ entry.year -}}
+    {%- if entry.volume %}; {{ entry.volume }}{% endif -%}
+    {%- if entry.number %}({{ entry.number }}){% endif -%}
+    {%- if entry.pages %}: {{ entry.pages }}{% endif %}.
+  </p>
+  <p class="publication-links">
+    {% if entry.doi %}
+      <a href="https://doi.org/{{ entry.doi }}">
+        {%- if entry.journal == 'bioRxiv' %}Preprint{% else %}Article{% endif -%}
+      </a>
+    {% endif %}
+    {% if entry.preprint %}
+      <a href="{{ entry.preprint }}">Preprint</a>
+    {% endif %}
+    {% if entry.fulltext %}
+      {% assign pdf_url = entry.fulltext %}
+      {% unless pdf_url contains '://' %}
+        {% assign pdf_url = pdf_url | prepend: '/assets/pdf/' | relative_url %}
+      {% endunless %}
+      <a href="{{ pdf_url }}">PDF</a>
+    {% endif %}
+    {% if entry.data %}
+      <a href="{{ entry.data }}">Data</a>
+    {% endif %}
+  </p>
+</article>
