@@ -82,7 +82,8 @@
         {%- if author_is_self -%}
           {%- assign self_initial = author.first | strip | slice: 0, 1 -%}
           <strong>
-            {{- self_initial -}}.
+            {{- self_initial -}}
+            .
             {{ author_last_html -}}
           </strong>
         {%- else -%}
