@@ -6,6 +6,16 @@
   {% if site.impressum_path %}
     <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
   {% endif %}
+  {% if site.enable_cookie_consent %}
+    <a href="{{ '/privacy/' | relative_url }}">Privacy</a>.
+    <button
+      type="button"
+      style="background: none; border: 0; padding: 0; color: inherit; font: inherit; text-transform: none; vertical-align: baseline; cursor: pointer"
+      data-cc="show-preferencesModal"
+    >
+      Cookie preferences
+    </button>.
+  {% endif %}
   {% if site.last_updated %}
     Last updated: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
