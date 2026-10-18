@@ -1,37 +1,24 @@
 /**
- * Cookie Consent Configuration
- * Documentation: https://cookieconsent.orestbida.com/
- *
- * GDPR-Compliant Approach:
- * - Analytics scripts use type="text/plain" data-category="analytics"
- * - The library blocks all marked scripts until user consents
- * - Scripts NEVER run until explicit consent is given
- * - Google Consent Mode is used for Google Analytics privacy mode before consent
- * - Other analytics (Cronitor, Pirsch, OpenPanel) are blocked until consent given
- *
- * Supported Analytics Providers:
- * - Cronitor RUM
- * - Google Analytics (GA4)
- * - OpenPanel Analytics
- * - Pirsch Analytics
+ * Opt-in analytics using https://cookieconsent.orestbida.com/.
+ * Templates mark analytics scripts with type="text/plain" data-category="analytics".
  */
 
-// Initialize Google Consent Mode BEFORE any tracking
-// This tells Google services to operate in privacy mode until user consents
+// Keep Google Analytics disabled until consent is restored or granted.
 window.dataLayer = window.dataLayer || [];
+var googleAnalyticsDisableKey = 'ga-disable-G-5HR8SZK5JH';
+window[googleAnalyticsDisableKey] = true;
 
-// Reuse existing global gtag if it was already defined (e.g. by other GA scripts)
-// to avoid redefining it multiple times when consent is granted.
 if (typeof window.gtag !== 'function') {
   window.gtag = function() {
     window.dataLayer.push(arguments);
   };
 }
 
-// Local alias for convenience in this file
 var gtag = window.gtag;
 gtag('consent', 'default', {
   'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
   'analytics_storage': 'denied',
   'functionality_storage': 'denied',
   'personalization_storage': 'denied'
@@ -54,12 +41,21 @@ function initializeCookieConsent() {
   }
 
   window.CookieConsent.run({
+    mode: 'opt-in',
     categories: {
       necessary: {
         enabled: true,
         readOnly: true
       },
-      analytics: {}
+      analytics: {
+        enabled: false,
+        autoClear: {
+          cookies: [{ name: /^_ga($|_)/ }],
+          // CookieConsent saves the choice and invokes onChange before reloading.
+          // Reloading unloads analytics scripts that already ran on this page.
+          reloadPage: true
+        }
+      }
     },
 
     language: {
@@ -68,10 +64,10 @@ function initializeCookieConsent() {
         en: {
           consentModal: {
             title: 'We use cookies',
-            description: 'This website uses cookies to improve your experience and analyze site traffic. By clicking "Accept all", you consent to our use of cookies.',
+            description: 'With your permission, Google Analytics uses cookies to measure visits to this website. You can accept or reject analytics and change your choice in the footer. <a class="cc-link" href="/privacy/">Privacy notice</a>.',
             acceptAllBtn: 'Accept all',
             acceptNecessaryBtn: 'Reject all',
-            showPreferencesBtn: 'Manage Individual preferences'
+            showPreferencesBtn: 'Cookie preferences'
           },
           preferencesModal: {
             title: 'Manage cookie preferences',
@@ -82,21 +78,21 @@ function initializeCookieConsent() {
             sections: [
               {
                 title: 'Cookie usage',
-                description: 'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.'
+                description: 'Analytics is optional. Your choice is saved in this browser, and you can change it using Cookie preferences in the footer.'
               },
               {
-                title: 'Strictly Necessary cookies',
-                description: 'These cookies are essential for the proper functioning of the website. Without these cookies, the website would not work properly.',
+                title: 'Consent preference',
+                description: 'The cc_cookie cookie remembers your privacy choices. It is not used for analytics.',
                 linkedCategory: 'necessary'
               },
               {
                 title: 'Analytics cookies',
-                description: 'These cookies allow us to measure traffic and analyze your behavior to improve our service.',
+                description: 'Google Analytics uses _ga cookies to measure visits, page views, traffic sources, and interactions. Advertising consent remains disabled.',
                 linkedCategory: 'analytics'
               },
               {
                 title: 'More information',
-                description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="https://liujh22.github.io/#contact">contact us</a>.'
+                description: 'See the <a class="cc-link" href="/privacy/">privacy notice</a> for details and contact information.'
               }
             ]
           }
@@ -104,8 +100,8 @@ function initializeCookieConsent() {
       }
     },
 
-    // Callback when user accepts/rejects consent
-    onFirstConsent: function(consentData) {
+    // Runs on the first choice and on later page loads with saved consent.
+    onConsent: function(consentData) {
       updateConsentMode(consentData);
     },
 
@@ -115,40 +111,20 @@ function initializeCookieConsent() {
     }
   });
 
-  /**
-   * Update Google Consent Mode based on user preferences
-   * This ensures Google services respect user choices
-   */
   function updateConsentMode(consentData) {
-    // Handle both callback data structures
-    var categories = consentData.categories || consentData;
-
-    // Ensure categories is an object
-    if (!categories || typeof categories !== 'object') {
-      console.warn('Invalid consent data structure:', consentData);
-      return;
-    }
+    // CookieConsent v3 supplies { cookie: { categories: string[] } }.
+    var analyticsAllowed = consentData.cookie.categories.includes('analytics');
+    // Denied consent alone can still allow cookieless pings from a loaded tag.
+    window[googleAnalyticsDisableKey] = !analyticsAllowed;
 
     gtag('consent', 'update', {
-      'analytics_storage': categories.analytics ? 'granted' : 'denied',
+      'analytics_storage': analyticsAllowed ? 'granted' : 'denied',
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'functionality_storage': 'denied',
       'personalization_storage': 'denied'
     });
-
-    if (categories.analytics) {
-      console.debug('✓ Analytics consent granted - tracking enabled for all providers');
-      // Analytics scripts with data-category="analytics" will automatically run
-      // when the library re-evaluates them after this consent update
-    } else {
-      console.debug('✗ Analytics consent denied - no tracking data collected');
-      // Analytics scripts are already blocked by the library (type="text/plain")
-      // No tracking will occur for:
-      // - Cronitor RUM
-      // - Google Analytics (GA4)
-      // - OpenPanel Analytics
-      // - Pirsch Analytics
-    }
   }
 }
 
