@@ -42,5 +42,24 @@
     {% if entry.data %}
       <a href="{{ entry.data }}">Data</a>
     {% endif %}
+    {% if entry.video and site.enable_video_embedding %}
+      <a href="#video-{{ entry.key }}" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="video-{{ entry.key }}">Video</a>
+    {% elsif entry.video %}
+      <a href="{{ entry.video }}">Video</a>
+    {% endif %}
   </p>
+  {% if entry.video and site.enable_video_embedding %}
+    <div class="collapse" id="video-{{ entry.key }}">
+      {%
+        include video.liquid
+        path=entry.video
+        class="img-fluid rounded z-depth-1"
+        title=entry.video_title
+        controls=true
+        style="width: 100%; height: 100%; aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden; border: none"
+        allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        scrolling="auto"
+      %}
+    </div>
+  {% endif %}
 </article>

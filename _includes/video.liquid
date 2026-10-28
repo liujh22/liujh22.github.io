@@ -59,8 +59,18 @@
         class="{{ include.class }}"
       {% endif %}
       frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      {% if include.style %}
+        style="{{ include.style }}"
+      {% endif %}
+      {% if include.allow %}
+        allow="{{ include.allow }}"
+      {% else %}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      {% endif %}
       allowfullscreen
+      {% if include.scrolling %}
+        scrolling="{{ include.scrolling }}"
+      {% endif %}
       {% if include.width %}
         width="{{ include.width }}"
       {% else %}
