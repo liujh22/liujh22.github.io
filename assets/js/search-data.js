@@ -41,7 +41,7 @@ ninja.data = [{
         
           title: "Cassyni talk: Lighting and circadian cues",
         
-        description: "My seminar on balance and navigation in larval zebrafish.",
+        description: "Watch my Cassyni seminar on balance and navigation in larval zebrafish.",
         section: "Posts",
         handler: () => {
           
@@ -59,6 +59,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-our-paper-lighting-and-circadian-cues-shape-locomotor-strategies-for-balance-and-navigation-in-larval-zebrafish-is-now-published-in-proceedings-of-the-royal-society-b",
           title: 'Our paper, Lighting and circadian cues shape locomotor strategies for balance and navigation...',
+          description: "",
+          section: "News",},{id: "news-the-recording-of-my-cassyni-talk-on-lighting-circadian-cues-and-zebrafish-locomotion-is-now-available-watch-the-talk",
+          title: 'The recording of my Cassyni talk on lighting, circadian cues, and zebrafish locomotion...',
           description: "",
           section: "News",},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
